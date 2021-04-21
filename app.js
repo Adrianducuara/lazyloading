@@ -1,10 +1,12 @@
 import { registerImage } from "./lazy.js";
-
-const app = document.getElementById('images')
+    
+export const app = document.getElementById('images')
 const addButton = document.querySelector('button')
 const removeElement = document.querySelector('a')
 const minimum = 1
 const maximum = 122
+let addImagenCount = 0
+let onloadImage = 0
 const random = () => Math.floor(Math.random() * (maximum - minimum)) + minimum
 
 const createImgNode = () => {
@@ -20,7 +22,6 @@ const addImage = () => {
     const newImage = createImgNode()
     app.append(newImage)
     registerImage(newImage)
-  
 }
 const clearAlert = () => {
     const modalClear = document.createElement('section')
