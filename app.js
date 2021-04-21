@@ -25,6 +25,9 @@ const addImage = () => {
 const clearAlert = () => {
     const modalClear = document.createElement('section')
     modalClear.className = 'modal-alert'
+    modalClear.addEventListener("click", () => {
+        modalClear.remove()
+    })
 
     const alert = document.createElement('article')
     alert.className = 'alert'
